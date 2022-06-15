@@ -1,6 +1,6 @@
 # Project exclude paths
-*.iml
-/.idea/
-/.gradle/
-/Simple Tic-Tac-Toe/task/build/
-/Simple Tic-Tac-Toe/task/out/
+/build/
+*/.gradle/
+
+.idea/
+*/.DS_Store
