@@ -1,4 +1,5 @@
 # Project exclude paths
+*.iml
 /.idea/
 /.gradle/
 /Simple Tic-Tac-Toe/task/build/
