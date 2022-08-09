@@ -1,3 +1,5 @@
+import controller.GameRunner;
+import entity.Grid;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertFalse;

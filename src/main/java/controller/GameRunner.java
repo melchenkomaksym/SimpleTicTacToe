@@ -1,14 +1,23 @@
+package controller;
+
+import entity.Grid;
+import utils.Symbols;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
+
+/**
+ * Class GameRunner stands for main point in manging the game.
+ */
 
 public class GameRunner {
 
     private Grid grid;
     private static final Scanner scanner = new Scanner(System.in);
 
-    GameRunner(Grid grid) {
+    public GameRunner(Grid grid) {
         this.grid = grid;
     }
 
@@ -55,13 +64,25 @@ public class GameRunner {
         return isFinished;
     }
 
+    /**
+     * Method for checking is player with 'X' sign has won.
+     */
+
     public boolean isXwin() {
         return isWin(Symbols.X.getValue());
     }
 
+    /**
+     * Method for checking is player with 'O' sign has won.
+     */
+
     public boolean isOwin() {
         return isWin(Symbols.O.getValue());
     }
+
+    /**
+     * Method for checking if at least one of the players won.
+     */
 
     public boolean isWin(String sign) {
         return isHorizontalWin(sign) || isDiagonalWin(sign) || isVerticalWin(sign);
@@ -126,6 +147,11 @@ public class GameRunner {
     public boolean isOccupied(int[] coordinates) {
         return !grid.getGrid()[coordinates[0]][coordinates[1]].equals(Symbols.EMPTY.getValue());
     }
+
+    /**
+     * Main method for running the game. It has loop with exiting conditions during each iteration.
+     * Number of iterations is not specified, but bounded by grid size.
+     */
 
     public void playTheGame() {
         for (int counter = 0;; counter++) {

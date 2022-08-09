@@ -1,3 +1,9 @@
+package utils;
+
+/**
+ * Collector of symbols that are used to draw a grid in the console and sign players moves.
+ */
+
 public enum Symbols {
 
     X ("X"),

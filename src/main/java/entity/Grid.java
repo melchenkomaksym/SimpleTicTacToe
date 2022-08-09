@@ -1,12 +1,24 @@
+package entity;
+
+import utils.Symbols;
+
 import java.util.Arrays;
+
+/**
+ * Class stands for game 'board'. It holds results of each players' move.
+ */
 
 public class Grid {
 
     private String[][] grid = new String[3][3];
 
-    Grid() {
+    public Grid() {
         initGrid();
     }
+
+    /**
+     * Initialization method for defining each of grids' cells with zero value.
+     */
 
     private void initGrid() {
         for (int i = 0; i < grid.length; i++) {
